@@ -1,19 +1,6 @@
 class FieldElement {
-    constructor(/* type, label, key, value, id, className, name, placeholder, required, onchange */) {
-        // this.type = type;
-        // this.label = label;
-        // this.key = key;
-        // this.value = value;
-        // this.id = id;
-        // this.className = className;
-        // this.name = name;
-        // this.placeholder = placeholder;
-        // this.required = required;
-        // this.onchange = onchange;
-    }
     setAttributes = (inputElement, item) => {
         inputElement.classList.add('form-control');
-
         inputElement.setAttribute("type", item.type);
         inputElement.setAttribute("value", item.value);
         inputElement.setAttribute("id", item.attr.id);
@@ -64,7 +51,6 @@ class FieldElement {
                 let radioElement = document.createElement("input");
                 radioElement.setAttribute("type", 'radio');
                 radioElement.classList.add('form-check-input');
-                // radioElement.classList.add('form-check-inline');
                 radioElement.setAttribute("name", item.name);
                 radioElement.setAttribute("value", item.value);
                 radioElement.setAttribute("id", item.attr.id);
@@ -100,7 +86,6 @@ class FieldElement {
             element.classList.add('btn-group');
             inputElement = document.createElement("BUTTON");
             inputElement.classList.add('btn-toolbar');
-            // inputElement.classList.add('sort');
             inputElement.onclick = elementData.attr.onchange;
             inputElement.innerHTML = elementData.attr.value;
             inputElement = this.setAttributes(inputElement, elementData);
